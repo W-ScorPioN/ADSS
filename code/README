@@ -1,0 +1,52 @@
+# 简介
+本程序由吴伟彬开发的矩阵乘法源码，其底层基于GNU GMP库开发。
+
+# GMP库安装
+## 下载
+网址如下（最新为6.3.0版本）：https://gmplib.org/download/gmp/gmp-6.3.0.tar.gz
+## 解压
+tar -zxvf gmp-6.3.0.tar.gz
+## 配置和编译
+./configure --enable-cxx
+make
+## 安装
+sudo make install
+
+# Google test
+# Check out the library.
+$ git clone https://github.com/google/benchmark.git
+# Go to the library root directory
+$ cd benchmark
+# Make a build directory to place the build output.
+$ cmake -E make_directory "build"
+# Generate build system files with cmake, and download any dependencies.
+$ cmake -E chdir "build" cmake -DBENCHMARK_DOWNLOAD_DEPENDENCIES=on -DCMAKE_BUILD_TYPE=Release ../
+# or, starting with CMake 3.13, use a simpler form:
+# cmake -DCMAKE_BUILD_TYPE=Release -S . -B "build"
+# Build the library.
+$ cmake --build "build" --config Release
+# install
+$ sudo cmake --build "build" --config Release --target install
+
+
+
+# 如果需要使用googletest benchmark，请运行如下指令
+编译:
+```
+g++ main.cpp -lgmpxx -lgmp -Wall -std=c++14 -pthread -lbenchmark -o test
+```
+运行：
+```
+./test >benchmarkResult.txt
+```
+
+# 针对FL测试，请运行如下指令
+# 注意：对于数据文件夹【第0轮】应该放在fl.cpp文件的同一级路径。
+编译:
+    ```
+    g++ fl.cpp -o testFL
+    ```
+运行：
+    ```
+    ./test
+    ```

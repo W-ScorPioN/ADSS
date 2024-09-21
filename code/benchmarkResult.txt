@@ -1,0 +1,20 @@
+2023-11-07T16:52:48+08:00
+Running ./test
+Run on (1 X 1200 MHz CPU )
+Load Average: 0.66, 0.40, 0.48
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+
+------------------------------------------------------------------
+Benchmark                        Time             CPU   Iterations
+------------------------------------------------------------------
+bench_dotProduct_8           28459 ns        28390 ns        24398
+bench_dotProduct_16          56174 ns        56036 ns        12114
+bench_dotProduct_32         111832 ns       111552 ns         6342
+bench_dotProduct_64         258985 ns       258319 ns         2828
+bench_matrixMul_8_8        1160039 ns      1156616 ns          608
+bench_matrixMul_16_16      8577997 ns      8554745 ns           81
+bench_matrixMul_32_32     64077232 ns     63912605 ns           11
+bench_matrixMul_64_64    516846027 ns    515402320 ns            2
+bench_matrixMul_128_128 4207691690 ns   4195494653 ns            1
+bench_matrixMul_256_256 3.4235e+10 ns   3.4093e+10 ns            1
+bench_matrixMul_512_512 2.6771e+11 ns   2.6646e+11 ns            1

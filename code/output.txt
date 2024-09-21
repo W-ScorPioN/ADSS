@@ -1,0 +1,12 @@
+------------------------------------------------------------------
+Benchmark                        Time             CPU   Iterations
+------------------------------------------------------------------
+bench_dotProduct_8            2038 ns         2038 ns       339765
+bench_dotProduct_16           3547 ns         3547 ns       198839
+bench_dotProduct_32           6453 ns         6452 ns       110234
+bench_dotProduct_64          12077 ns        12076 ns        56178
+bench_matrixMul_8_8          56368 ns        56363 ns        12050
+bench_matrixMul_16_16       359117 ns       358916 ns         1984
+bench_matrixMul_32_32      2553333 ns      2551673 ns          272
+bench_matrixMul_64_64     18990535 ns     18989694 ns           36
+bench_matrixMul_128_128  150419650 ns    150418800 ns            5
